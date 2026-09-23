@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', 'Hind Siliguri', sans-serif;
+  --color-garibook-primary: #1E40AF;
+  --color-garibook-secondary: #F3F4F6;
+  --color-garibook-accent: #10B981;
+  --color-garibook-dark: #111827;
+}
+
+html {
+  font-family: 'Montserrat', 'Hind Siliguri', sans-serif;
+  scroll-behavior: smooth;
+}
