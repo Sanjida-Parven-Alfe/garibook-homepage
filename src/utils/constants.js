@@ -43,6 +43,45 @@ export const TRANSLATIONS = {
         continueBtn: "Continue",
       },
     },
+    stats: {
+      title: "From Everyday Rides to Meaningful Journeys",
+      items: [
+        { count: "300,000+", label: "Trip Requests" },
+        { count: "850,000+", label: "Total Customers" },
+        { count: "35,000+", label: "Active Drivers" },
+        { count: "64", label: "District Covered" },
+      ],
+    },
+    services: {
+      heading: "Our Services",
+      rides: "Rides",
+      business: "Garibook Business",
+      club: "Garibook Club",
+      vms: "VMS",
+      everyRideHeading: "Every Ride One Platform",
+      intercity: "Intercity Car Rental",
+      intercityDesc: "Travel between cities with comfort and confidence.",
+      rideshare: "Ride share",
+      rideshareDesc: "Go anywhere in the city, quickly and easily.",
+      airport: "Airport Rental",
+      airportDesc:
+        "Whether you're flying abroad or returning home, enjoy a comfortable and worry-free airport journey.",
+      hourlyRental: "Hourly Rental",
+      hourlyDesc: "Rent a car by the hour, tailored to your needs.",
+    },
+    business: {
+      heading: "Modern Car Rentals for Business",
+      desc: "Simplify your corporate transportation, ensure on-time team mobility, and gain control with our VMS.",
+      learnMore: "Learn More",
+    },
+    club: {
+      heading: "Turn Your Car into Earnings with Garibook Club",
+      desc: "Garibook Club is more than just a community. Join a vibrant network of car enthusiasts, all fueled by the same passion: the open road and the thrill of making money doing what they love.",
+    },
+    vms: {
+      heading: "Vehicle Management System - VMS",
+      desc: "Just like Garibook Business makes traveling easy for your team, our Vehicle Management System (VMS) helps you take care of your own cars. VMS is a great tool that works with Garibook Business to make sure your vehicles are used the best way possible.",
+    },
   },
   bn: {
     brand: "গারিবুক",
@@ -87,6 +126,45 @@ export const TRANSLATIONS = {
         datePlaceholder: "দিন/মাস/বছর ০০:০০ PM",
         continueBtn: "এগিয়ে যান",
       },
+    },
+    stats: {
+      title: "দৈনন্দিন যাত্রা থেকে স্মরণীয় ভ্রমণ",
+      items: [
+        { count: "৩,০০,০০০+", label: "ট্রিপ রিকুয়েস্ট" },
+        { count: "৮,৫০,০০০+", label: "মোট কাস্টমার" },
+        { count: "৩৫,০০০+", label: "অ্যাক্টিভ ড্রাইভার" },
+        { count: "৬৪", label: "জেলা কভার্ড" },
+      ],
+    },
+    services: {
+      heading: "আমাদের সেবাসমূহ",
+      rides: "রাইড",
+      business: "গারিবুক বিজনেস",
+      club: "গারিবুক ক্লাব",
+      vms: "ভিএমএস",
+      everyRideHeading: "প্রতিটি রাইড, একটি প্ল্যাটফর্ম",
+      intercity: "ইন্টারসিটি কার রেন্টাল",
+      intercityDesc: "আরাম ও নিশ্চিন্তে শহর থেকে শহরে ভ্রমণ করুন।",
+      rideshare: "রাইড শেয়ার",
+      rideshareDesc: "শহরের যেকোনো জায়গায় দ্রুত ও সহজে যান।",
+      airport: "এয়ারপোর্ট রেন্টাল",
+      airportDesc:
+        "বিদেশ যাত্রা হোক বা দেশে ফেরা, উপভোগ করুন আরামদায়ক এয়ারপোর্ট যাত্রা।",
+      hourlyRental: "ঘণ্টাভিত্তিক রেন্টাল",
+      hourlyDesc: "আপনার প্রয়োজন অনুযায়ী ঘণ্টাভিত্তিক গাড়ি ভাড়া নিন।",
+    },
+    business: {
+      heading: "ব্যবসার জন্য আধুনিক কার রেন্টাল",
+      desc: "আপনার প্রতিষ্ঠানের পরিবহন সহজ করুন এবং আমাদের ভিএমএস দিয়ে নিয়ন্ত্রণ রাখুন।",
+      learnMore: "আরও জানুন",
+    },
+    club: {
+      heading: "গারিবুক ক্লাবের মাধ্যমে আপনার গাড়ি থেকে আয় করুন",
+      desc: "গারিবুক ক্লাব শুধু একটি কমিউনিটি নয়। যোগ দিন গাড়িপ্রেমীদের এক প্রাণবন্ত নেটওয়ার্কে।",
+    },
+    vms: {
+      heading: "ভেহিকল ম্যানেজমেন্ট সিস্টেম - ভিএমএস",
+      desc: "গারিবুক বিজনেস যেমন আপনার টিমের যাত্রা সহজ করে, তেমনি ভিএমএস আপনার নিজের গাড়ির যত্ন নিতে সাহায্য করে।",
     },
   },
 };

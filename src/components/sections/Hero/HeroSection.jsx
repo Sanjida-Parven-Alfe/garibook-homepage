@@ -49,7 +49,7 @@ const HeroSection = () => {
   }, [lang]);
 
   return (
-    <section className="relative overflow-hidden bg-white pt-4 pb-8 lg:pt-20 lg:pb-24">
+    <section className="relative overflow-hidden bg-white pt-4 pb-0 lg:pt-20 lg:pb-0">
       {/* Container Content */}
       <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12">
         <div className="mb-6 grid grid-cols-1 items-start gap-4 lg:grid-cols-12">
@@ -94,7 +94,7 @@ const HeroSection = () => {
               preserveAspectRatio="none"
             >
               <path
-                fill="#2563eb"
+                fill="#0a50e5"
                 d="M0,60 C300,140 520,240 720,220 C960,195 1150,110 1300,140 C1380,155 1420,165 1440,180 L1440,320 L0,320 Z"
               />
             </svg>

@@ -2,6 +2,8 @@ import "./styles/index.css";
 import Navbar from "./components/layout/Navbar";
 import { LanguageProvider } from "./context/LanguageContext";
 import HeroSection from "./components/sections/Hero/HeroSection";
+import StatsSection from "./components/sections/StatsSection";
+import ServicesSection from "./components/sections/ServicesSection";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <Navbar />
         <main>
           <HeroSection />
+          <StatsSection /> 
+          <ServicesSection />
         </main>
       </div>
     </LanguageProvider>
