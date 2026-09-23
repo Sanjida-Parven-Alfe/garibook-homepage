@@ -1,16 +1,19 @@
 import "./styles/index.css";
-import Navbar from './components/layout/Navbar';
+import Navbar from "./components/layout/Navbar";
+import { LanguageProvider } from "./context/LanguageContext";
+import HeroSection from "./components/sections/Hero/HeroSection";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
-      <Navbar />
-
-      <main className="max-w-7xl mx-auto px-4 py-12 text-center">
-
-      </main>
-    </div>
-  )
+    <LanguageProvider>
+      <div className="min-h-screen bg-gray-50/50">
+        <Navbar />
+        <main>
+          <HeroSection />
+        </main>
+      </div>
+    </LanguageProvider>
+  );
 }
 
-export default App
+export default App;
