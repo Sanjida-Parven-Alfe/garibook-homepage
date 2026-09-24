@@ -12,6 +12,9 @@ import NewsroomSection from "./components/sections/NewsroomSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
 import BlogSection from "./components/sections/BlogSection";
 import DownloadAppSection from "./components/sections/DownloadAppSection";
+import Footer from "./components/layout/Footer";
+import ScrollToTop from "./components/common/ScrollToTop";
+import WebChat from "./components/common/WebChat";
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
           <BlogSection/>
           <DownloadAppSection/>
         </main>
+        <Footer/>
+        <ScrollToTop/>
+        <WebChat/>
       </div>
     </LanguageProvider>
   );
