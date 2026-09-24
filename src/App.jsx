@@ -9,6 +9,8 @@ import GallerySection from "./components/sections/GallerySection";
 import BookingArrivalSection from "./components/sections/BookingArrivalSection";
 import SmartDriverSection from "./components/sections/SmartDriverSection";
 import NewsroomSection from "./components/sections/NewsroomSection";
+import TestimonialsSection from "./components/sections/TestimonialsSection";
+import BlogSection from "./components/sections/BlogSection";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <BookingArrivalSection/>
           <SmartDriverSection/>
           <NewsroomSection/>
+          <TestimonialsSection/>
+          <BlogSection/>
         </main>
       </div>
     </LanguageProvider>

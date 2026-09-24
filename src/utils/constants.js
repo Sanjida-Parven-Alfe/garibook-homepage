@@ -94,6 +94,12 @@ export const TRANSLATIONS = {
       heading: "We Featured by Top news Platforms",
       readArticle: "Read Article",
     },
+    testimonials: {
+      heading: "Our Passengers Speak For Us",
+      desc: "Our journey was seamless and enjoyable from start to finish. The booking process was straightforward, and the staff were incredibly attentive, ensuring we felt comfortable throughout the trip.",
+      banker: "Banker",
+      serviceHolder: "Service Holder",
+    },
     bookingArrival: {
       heading: "From Booking to Arrival It's All in Your Hands",
       downloadApp: "Download App",
@@ -207,6 +213,12 @@ export const TRANSLATIONS = {
     newsroom: {
       heading: "শীর্ষস্থানীয় নিউজ প্ল্যাটফর্মে আমরা",
       readArticle: "পড়ুন",
+    },
+    testimonials: {
+      heading: "আমাদের যাত্রীদের অভিজ্ঞতা",
+      desc: "আমাদের যাত্রা শুরু থেকে শেষ পর্যন্ত ছিল ঝামেলাহীন ও আনন্দদায়ক। বুকিং প্রক্রিয়া সহজ ছিল এবং স্টাফরা অত্যন্ত মনোযোগী ছিলেন, যা পুরো যাত্রায় আমাদের স্বাচ্ছন্দ্যবোধ নিশ্চিত করেছিল।",
+      banker: "ব্যাংকার",
+      serviceHolder: "চাকরিজীবী",
     },
     bookingArrival: {
       heading: "বুকিং থেকে পৌঁছানো — সবকিছু আপনার হাতের মুঠোয়",
