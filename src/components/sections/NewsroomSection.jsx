@@ -1,5 +1,12 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
+
+import bgShape1 from "../../assets/images/bg-shape1.png";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const newsItems = [
   {
@@ -34,66 +41,128 @@ const newsItems = [
 
 export default function NewsroomSection() {
   const { t, lang } = useLanguage();
-  const scrollRef = useRef(null);
+  const sectionRef = useRef(null);
+  const headingRef = useRef(null);
+  const sliderRef = useRef(null);
+  const trackRef = useRef(null);
 
-  const scroll = (dir) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: dir === "next" ? 340 : -340,
-        behavior: "smooth",
-      });
-    }
-  };
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // 1. Clear Heading Scroll In/Out Animation
+      gsap.fromTo(
+        headingRef.current,
+        { opacity: 0, y: 70 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+
+      // 2. Clear Slider Content Scroll In/Out Animation
+      gsap.fromTo(
+        sliderRef.current,
+        { opacity: 0, y: 90, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+            end: "bottom 20%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      );
+
+      // 3. Infinite Seamless Auto Slider
+      const track = trackRef.current;
+      if (track) {
+        const tween = gsap.to(track, {
+          xPercent: -50,
+          ease: "none",
+          duration: 25,
+          repeat: -1,
+        });
+
+        const container = sliderRef.current;
+        if (container) {
+          container.addEventListener("mouseenter", () => tween.pause());
+          container.addEventListener("mouseleave", () => tween.play());
+        }
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const duplicatedItems = [...newsItems, ...newsItems];
 
   return (
-    <section className="py-16 md:py-20">
-      <div className="mx-auto max-w-7xl px-6 md:px-12">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 max-w-xl">
-            {t.newsroom?.heading}
+    <section
+      ref={sectionRef}
+      className="relative w-full pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-cover bg-center bg-no-repeat bg-gray-50/20"
+      style={{ backgroundImage: `url(${bgShape1})` }}
+    >
+      <div className="w-full px-4 sm:px-6 md:px-12">
+        <div ref={headingRef} className="mb-8 md:mb-10">
+          <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-tight tracking-tight drop-shadow-sm max-w-2xl">
+            {t.newsroom?.heading || "We Featured by Top News Platforms"}
           </h2>
-          <div className="flex gap-3">
-            <button
-              onClick={() => scroll("prev")}
-              className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 cursor-pointer transition-all"
-            >
-              ←
-            </button>
-            <button
-              onClick={() => scroll("next")}
-              className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 cursor-pointer transition-all"
-            >
-              →
-            </button>
-          </div>
         </div>
 
-        <div
-          ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar"
-        >
-          {newsItems.map((item, i) => (
-            <div
-              key={i}
-              className="min-w-[300px] max-w-[300px] flex-shrink-0 rounded-2xl overflow-hidden border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow"
-            >
-              <img src={item.img} alt="" className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <span className="text-xs text-gray-400">{item.date}</span>
-                <h3 className="font-bold text-gray-900 mt-2 mb-3 line-clamp-2">
-                  {lang === "bn" ? item.titleBn : item.titleEn}
-                </h3>
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-600 text-sm font-semibold inline-flex items-center gap-1 hover:underline"
-                >
-                  {t.newsroom?.readArticle || "Read Article"} →
-                </a>
+        <div ref={sliderRef} className="w-full overflow-hidden py-2">
+          <div
+            ref={trackRef}
+            className="flex gap-6 w-max"
+            style={{ willChange: "transform" }}
+          >
+            {duplicatedItems.map((item, i) => (
+              <div
+                key={i}
+                className="w-[300px] sm:w-[350px] md:w-[380px] flex-shrink-0 rounded-3xl overflow-hidden bg-white/90 backdrop-blur-md border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col justify-between"
+              >
+                {/* Image & Date Badge */}
+                <div className="relative h-52 sm:h-56 overflow-hidden bg-gray-100">
+                  <img
+                    src={item.img}
+                    alt=""
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-full text-[11px] font-bold text-white shadow-md">
+                    {item.date}
+                  </div>
+                </div>
+
+                {/* Content & Link */}
+                <div className="p-6 flex flex-col justify-between flex-grow space-y-4">
+                  <h3 className="font-extrabold text-slate-900 text-lg md:text-xl leading-snug line-clamp-2 group-hover:text-blue-600 transition-colors">
+                    {lang === "bn" ? item.titleBn : item.titleEn}
+                  </h3>
+
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center space-x-2 text-sm font-bold text-blue-600 group-hover:text-amber-500 transition-colors pt-2 border-t border-gray-100/80"
+                  >
+                    <span>{t.newsroom?.readArticle || "Read Article"}</span>
+                    <ArrowUpRight className="w-4 h-4 stroke-[2.5] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
