@@ -17,17 +17,10 @@ export const TRANSLATIONS = {
         "Assurance of Effortless Travel",
       ],
       description:
-        "Choose your city, pick your car and enjoy the journey with Garibook’s best drivers.",
+        "Choose your city, pick your car and enjoy the journey with Garibook's best drivers.",
       downloadBtn: "Download App",
-      tabs: {
-        carRental: "Car Rental",
-        airportRental: "Airport Rental",
-      },
-      tripTypes: {
-        oneWay: "One Way",
-        roundWay: "Round Way",
-        hourly: "Hourly",
-      },
+      tabs: { carRental: "Car Rental", airportRental: "Airport Rental" },
+      tripTypes: { oneWay: "One Way", roundWay: "Round Way", hourly: "Hourly" },
       form: {
         chooseCar: "Choose a Car",
         chooseCarPlaceholder: "Select Car Type",
@@ -80,7 +73,45 @@ export const TRANSLATIONS = {
     },
     vms: {
       heading: "Vehicle Management System - VMS",
-      desc: "Just like Garibook Business makes traveling easy for your team, our Vehicle Management System (VMS) helps you take care of your own cars. VMS is a great tool that works with Garibook Business to make sure your vehicles are used the best way possible.",
+      desc: "Just like Garibook Business makes traveling easy for your team, our Vehicle Management System (VMS) helps you take care of your own cars.",
+    },
+    freedom: {
+      heading: "Freedom in Every Journey",
+      chooseCar: "Choose the Car",
+      chooseCarDesc: "Pick what suits your comfort.",
+      chooseDriver: "Choose the Driver",
+      chooseDriverDesc: "Based on ratings and reviews.",
+      chooseFare: "Choose the Fare",
+      chooseFareDesc: "Select the bid that fits your budget.",
+    },
+    gallery: {
+      heading: "More Than Miles — We Bring People Together",
+      airportRentals: "Airport Rentals",
+      familyTrips: "Family Trips",
+      longTours: "Long Tours",
+    },
+    newsroom: {
+      heading: "We Featured by Top news Platforms",
+      readArticle: "Read Article",
+    },
+    bookingArrival: {
+      heading: "From Booking to Arrival It's All in Your Hands",
+      downloadApp: "Download App",
+    },
+    smartDriver: {
+      heading: "Be a Smart Driver",
+      subheading: "0% Commission 100% Freedom",
+      cta: "Download Smart Driver App",
+    },
+    blog: {
+      heading: "Beyond Destinations",
+      desc: "Discover travel hacks, guides, and inspirations for your next intercity trip with Garibook.",
+      showAll: "Show All Blogs",
+    },
+    downloadApp: {
+      heading: "Download Garibook Mobile App",
+      subtext: "Download our Customer, Smart Driver and Enterprise App",
+      cta: "Download App",
     },
   },
   bn: {
@@ -103,15 +134,8 @@ export const TRANSLATIONS = {
       description:
         "সেরা কোয়ালিটির গাড়িতে, ভেরিফাইড ড্রাইভারের সাথে গন্তব্যে পৌঁছে যান নিরাপদে।",
       downloadBtn: "অ্যাপ ডাউনলোড করুন",
-      tabs: {
-        carRental: "কার রেন্টাল",
-        airportRental: "এয়ারপোর্ট রেন্টাল",
-      },
-      tripTypes: {
-        oneWay: "ওয়ান ওয়ে",
-        roundWay: "রাউন্ড ওয়ে",
-        hourly: "আওয়ারলি",
-      },
+      tabs: { carRental: "কার রেন্টাল", airportRental: "এয়ারপোর্ট রেন্টাল" },
+      tripTypes: { oneWay: "ওয়ান ওয়ে", roundWay: "রাউন্ড ওয়ে", hourly: "আওয়ারলি" },
       form: {
         chooseCar: "একটি গাড়ি নির্বাচন করুন",
         chooseCarPlaceholder: "গাড়ি নির্বাচন করুন",
@@ -148,8 +172,7 @@ export const TRANSLATIONS = {
       rideshare: "রাইড শেয়ার",
       rideshareDesc: "শহরের যেকোনো জায়গায় দ্রুত ও সহজে যান।",
       airport: "এয়ারপোর্ট রেন্টাল",
-      airportDesc:
-        "বিদেশ যাত্রা হোক বা দেশে ফেরা, উপভোগ করুন আরামদায়ক এয়ারপোর্ট যাত্রা।",
+      airportDesc: "বিদেশ যাত্রা হোক বা দেশে ফেরা, উপভোগ করুন আরামদায়ক এয়ারপোর্ট যাত্রা।",
       hourlyRental: "ঘণ্টাভিত্তিক রেন্টাল",
       hourlyDesc: "আপনার প্রয়োজন অনুযায়ী ঘণ্টাভিত্তিক গাড়ি ভাড়া নিন।",
     },
@@ -165,6 +188,44 @@ export const TRANSLATIONS = {
     vms: {
       heading: "ভেহিকল ম্যানেজমেন্ট সিস্টেম - ভিএমএস",
       desc: "গারিবুক বিজনেস যেমন আপনার টিমের যাত্রা সহজ করে, তেমনি ভিএমএস আপনার নিজের গাড়ির যত্ন নিতে সাহায্য করে।",
+    },
+    freedom: {
+      heading: "প্রতিটি যাত্রায় স্বাধীনতা",
+      chooseCar: "গাড়ি বেছে নিন",
+      chooseCarDesc: "আপনার আরামের জন্য উপযুক্তটি বেছে নিন।",
+      chooseDriver: "চালক বেছে নিন",
+      chooseDriverDesc: "রেটিং ও রিভিউ অনুযায়ী।",
+      chooseFare: "ভাড়া বেছে নিন",
+      chooseFareDesc: "আপনার বাজেটে মানানসই অফার বেছে নিন।",
+    },
+    gallery: {
+      heading: "শুধু মাইল নয় — আমরা মানুষকে কাছে আনি",
+      airportRentals: "এয়ারপোর্ট রেন্টাল",
+      familyTrips: "পারিবারিক ভ্রমণ",
+      longTours: "দীর্ঘ ভ্রমণ",
+    },
+    newsroom: {
+      heading: "শীর্ষস্থানীয় নিউজ প্ল্যাটফর্মে আমরা",
+      readArticle: "পড়ুন",
+    },
+    bookingArrival: {
+      heading: "বুকিং থেকে পৌঁছানো — সবকিছু আপনার হাতের মুঠোয়",
+      downloadApp: "অ্যাপ ডাউনলোড করুন",
+    },
+    smartDriver: {
+      heading: "স্মার্ট ড্রাইভার হোন",
+      subheading: "০% কমিশন ১০০% স্বাধীনতা",
+      cta: "স্মার্ট ড্রাইভার অ্যাপ ডাউনলোড করুন",
+    },
+    blog: {
+      heading: "গন্তব্যের বাইরেও",
+      desc: "গারিবুকের সাথে আপনার পরবর্তী ইন্টারসিটি ভ্রমণের জন্য টিপস ও গাইড জানুন।",
+      showAll: "সব ব্লগ দেখুন",
+    },
+    downloadApp: {
+      heading: "গারিবুক মোবাইল অ্যাপ ডাউনলোড করুন",
+      subtext: "আমাদের কাস্টমার, স্মার্ট ড্রাইভার ও এন্টারপ্রাইজ অ্যাপ ডাউনলোড করুন",
+      cta: "অ্যাপ ডাউনলোড করুন",
     },
   },
 };

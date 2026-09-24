@@ -4,6 +4,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import HeroSection from "./components/sections/Hero/HeroSection";
 import StatsSection from "./components/sections/StatsSection";
 import ServicesSection from "./components/sections/ServicesSection";
+import FreedomSection from "./components/sections/FreedomSection";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <HeroSection />
           <StatsSection /> 
           <ServicesSection />
+          <FreedomSection />
         </main>
       </div>
     </LanguageProvider>
