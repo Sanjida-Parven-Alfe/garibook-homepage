@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Globe, Menu, X } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import logo from '../../assets/images/logo.png';
@@ -6,21 +6,39 @@ import logo from '../../assets/images/logo.png';
 const Navbar = () => {
   const { lang, toggleLanguage, t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all">
+    <header
+      className={`sticky top-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 ${
+        isScrolled ? 'shadow-md py-1' : 'shadow-none py-0'
+      }`}
+    >
       <div className="w-full px-4 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-20">
           
-          {/*Logo*/}
+          {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="flex items-center space-x-2.5 group">
+            <a href="#" className="flex items-center space-x-3 group">
               <img 
                 src={logo} 
                 alt="Garibook Logo" 
-                className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-105"
+                className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="text-3xl font-black tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-900 bg-clip-text text-transparent transition-all duration-300">
+              <span className="text-4xl font-black tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-indigo-900 bg-clip-text text-transparent transition-all duration-300">
                 {t.brand}
               </span>
             </a>
