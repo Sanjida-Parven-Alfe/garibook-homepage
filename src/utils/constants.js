@@ -59,7 +59,7 @@ export const TRANSLATIONS = {
       airport: "Airport Rental",
       airportDesc:
         "Whether you're flying abroad or returning home, enjoy a comfortable and worry-free airport journey.",
-      hourly: "Hourly Rental", // Fixed key name here
+      hourly: "Hourly Rental",
       hourlyDesc: "Rent a car by the hour, tailored to your needs.",
     },
     business: {
@@ -86,6 +86,8 @@ export const TRANSLATIONS = {
     },
     gallery: {
       heading: "More Than Miles — We Bring People Together",
+      quoteDesc:
+        '"Quick and easy booking! I needed a ride to the airport at 5 AM, and the driver arrived on time. The car was clean, and the ride was smooth. Definitely my go-to taxi service from now on!"',
       airportRentals: "Airport Rentals",
       familyTrips: "Family Trips",
       longTours: "Long Tours",
@@ -201,7 +203,7 @@ export const TRANSLATIONS = {
       rideshareDesc: "শহরের যেকোনো জায়গায় দ্রুত ও সহজে যান।",
       airport: "এয়ারপোর্ট রেন্টাল",
       airportDesc: "বিদেশ যাত্রা হোক বা দেশে ফেরা, উপভোগ করুন আরামদায়ক এয়ারপোর্ট যাত্রা।",
-      hourly: "ঘণ্টাভিত্তিক রেন্টাল", // Fixed key name here
+      hourly: "ঘণ্টাভিত্তিক রেন্টাল",
       hourlyDesc: "আপনার প্রয়োজন অনুযায়ী ঘণ্টাভিত্তিক গাড়ি ভাড়া নিন।",
     },
     business: {
@@ -228,6 +230,8 @@ export const TRANSLATIONS = {
     },
     gallery: {
       heading: "শুধু মাইল নয় — আমরা মানুষকে কাছে আনি",
+      quoteDesc:
+        '"দ্রুত এবং সহজ বুকিং! ভোর ৫টায় আমার এয়ারপোর্টের জন্য গাড়ির প্রয়োজন ছিল এবং ড্রাইভার ঠিক সময়ে চলে এসেছিলেন। গাড়িটি পরিষ্কার ছিল এবং যাত্রাটিও খুব আরামদায়ক ছিল। নিঃসন্দেহে এটি এখন থেকে আমার সেরা পছন্দ!"',
       airportRentals: "এয়ারপোর্ট রেন্টাল",
       familyTrips: "পারিবারিক ভ্রমণ",
       longTours: "দীর্ঘ ভ্রমণ",
