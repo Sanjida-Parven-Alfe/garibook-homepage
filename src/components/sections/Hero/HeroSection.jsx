@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "../../../context/LanguageContext";
 import HeroBookingForm from "./HeroBookingForm";
+import bgShape from "../../../assets/images/bg-shape1.png";
 
 const HeroSection = () => {
   const { t, lang } = useLanguage();
@@ -49,7 +50,13 @@ const HeroSection = () => {
   }, [lang]);
 
   return (
-    <section className="relative overflow-hidden bg-white pt-4 pb-0 lg:pt-20 lg:pb-0">
+    <section className="relative overflow-hidden bg-transparent -mt-20 pt-28 pb-0 lg:pt-36 lg:pb-0">
+      {/* Background Shape Image extending under Navbar */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-top bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: `url(${bgShape})` }}
+      />
+
       {/* Container Content */}
       <div className="relative z-10 w-full px-4 sm:px-8 lg:px-12">
         <div className="mb-6 grid grid-cols-1 items-start gap-4 lg:grid-cols-12">
@@ -86,7 +93,7 @@ const HeroSection = () => {
         </div>
 
         <div className="relative pt-4">
-          {/* Original Curved Wave Shape Background */}
+          {/* Curved Wave Shape Background */}
           <div className="pointer-events-none absolute -top-2 left-1/2 z-0 h-[calc(100%+20px)] w-[120vw] -translate-x-1/2 overflow-hidden">
             <svg
               className="h-full w-full"

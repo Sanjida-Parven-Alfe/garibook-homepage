@@ -23,8 +23,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 ${
-        isScrolled ? 'shadow-md py-1' : 'shadow-none py-0'
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-md py-1'
+          : 'bg-transparent backdrop-blur-none shadow-none py-0'
       }`}
     >
       <div className="w-full px-4 sm:px-8 lg:px-12">
@@ -47,13 +49,13 @@ const Navbar = () => {
           {/* Desktop Right Side Group */}
           <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             
-            {/* Desktop Navigation Links */}
+            {/* Navigation Links */}
             <nav className="flex items-center space-x-1 xl:space-x-2 text-sm font-semibold text-gray-800">
               {t.nav && t.nav.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="px-3.5 py-2 rounded-full text-gray-800 font-medium hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 hover:scale-105 active:scale-95 whitespace-nowrap"
+                  className="px-3.5 py-2 rounded-full text-gray-800 font-medium hover:text-blue-600 hover:bg-white/60 transition-all duration-300 hover:scale-105 active:scale-95 whitespace-nowrap"
                 >
                   {link.name}
                 </a>
@@ -64,7 +66,7 @@ const Navbar = () => {
             <button
               onClick={toggleLanguage}
               type="button"
-              className="group flex items-center space-x-2 px-3.5 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-700 border border-slate-200/80 rounded-xl text-xs font-bold transition-all duration-300 hover:shadow-sm cursor-pointer whitespace-nowrap"
+              className="group flex items-center space-x-2 px-3.5 py-2 bg-white/70 hover:bg-white text-slate-700 border border-slate-200/80 rounded-xl text-xs font-bold transition-all duration-300 hover:shadow-sm cursor-pointer whitespace-nowrap backdrop-blur-sm"
             >
               <Globe className="w-4 h-4 text-blue-600 transition-transform duration-500 group-hover:rotate-180" />
               <span className="tracking-wider uppercase">
@@ -81,12 +83,10 @@ const Navbar = () => {
 
           {/* Mobile Right Side Group */}
           <div className="lg:hidden flex items-center space-x-3">
-            
-            {/* Language Switcher */}
             <button
               onClick={toggleLanguage}
               type="button"
-              className="group flex items-center space-x-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-slate-700 border border-slate-200/80 rounded-lg text-xs font-bold transition-all duration-300 cursor-pointer"
+              className="group flex items-center space-x-1.5 px-3 py-1.5 bg-white/70 hover:bg-white text-slate-700 border border-slate-200/80 rounded-lg text-xs font-bold transition-all duration-300 cursor-pointer"
             >
               <Globe className="w-3.5 h-3.5 text-blue-600 transition-transform duration-500 group-hover:rotate-180" />
               <span className="tracking-wider uppercase">
@@ -94,7 +94,6 @@ const Navbar = () => {
               </span>
             </button>
 
-            {/* Mobile Hamburger Toggle Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-gray-700 hover:text-blue-600 focus:outline-none cursor-pointer"
@@ -108,7 +107,6 @@ const Navbar = () => {
 
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-2xl px-6 py-5 space-y-4 transition-all duration-300 animate-in fade-in slide-in-from-top-2">
-          
           <nav className="flex flex-col space-y-3">
             {t.nav && t.nav.map((link, index) => (
               <a
@@ -130,7 +128,6 @@ const Navbar = () => {
               {t.login} →
             </button>
           </div>
-
         </div>
       )}
     </header>
