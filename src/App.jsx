@@ -5,6 +5,7 @@ import HeroSection from "./components/sections/Hero/HeroSection";
 import StatsSection from "./components/sections/StatsSection";
 import ServicesSection from "./components/sections/ServicesSection";
 import FreedomSection from "./components/sections/FreedomSection";
+import GallerySection from "./components/sections/GallerySection";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <StatsSection /> 
           <ServicesSection />
           <FreedomSection />
+          <GallerySection/>
         </main>
       </div>
     </LanguageProvider>
