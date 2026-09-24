@@ -11,6 +11,7 @@ import SmartDriverSection from "./components/sections/SmartDriverSection";
 import NewsroomSection from "./components/sections/NewsroomSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
 import BlogSection from "./components/sections/BlogSection";
+import DownloadAppSection from "./components/sections/DownloadAppSection";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <NewsroomSection/>
           <TestimonialsSection/>
           <BlogSection/>
+          <DownloadAppSection/>
         </main>
       </div>
     </LanguageProvider>
