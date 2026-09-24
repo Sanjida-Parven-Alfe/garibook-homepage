@@ -59,7 +59,7 @@ export const TRANSLATIONS = {
       airport: "Airport Rental",
       airportDesc:
         "Whether you're flying abroad or returning home, enjoy a comfortable and worry-free airport journey.",
-      hourlyRental: "Hourly Rental",
+      hourly: "Hourly Rental", // Fixed key name here
       hourlyDesc: "Rent a car by the hour, tailored to your needs.",
     },
     business: {
@@ -201,7 +201,7 @@ export const TRANSLATIONS = {
       rideshareDesc: "শহরের যেকোনো জায়গায় দ্রুত ও সহজে যান।",
       airport: "এয়ারপোর্ট রেন্টাল",
       airportDesc: "বিদেশ যাত্রা হোক বা দেশে ফেরা, উপভোগ করুন আরামদায়ক এয়ারপোর্ট যাত্রা।",
-      hourlyRental: "ঘণ্টাভিত্তিক রেন্টাল",
+      hourly: "ঘণ্টাভিত্তিক রেন্টাল", // Fixed key name here
       hourlyDesc: "আপনার প্রয়োজন অনুযায়ী ঘণ্টাভিত্তিক গাড়ি ভাড়া নিন।",
     },
     business: {
