@@ -6,6 +6,7 @@ import StatsSection from "./components/sections/StatsSection";
 import ServicesSection from "./components/sections/ServicesSection";
 import FreedomSection from "./components/sections/FreedomSection";
 import GallerySection from "./components/sections/GallerySection";
+import BookingArrivalSection from "./components/sections/BookingArrivalSection";
 import NewsroomSection from "./components/sections/NewsroomSection";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <ServicesSection />
           <FreedomSection />
           <GallerySection/>
+          <BookingArrivalSection/>
           <NewsroomSection/>
         </main>
       </div>
